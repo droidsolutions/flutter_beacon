@@ -86,9 +86,11 @@ class FlutterBeaconScanner {
       Log.e("RANGING", "Region ranging is null or empty. Ranging not started.");
       return;
     }
+    
 
     try {
       if (plugin.getBeaconManager() != null) {
+        plugin.getBeaconManager().setForegroundScanPeriod(3500); 
         plugin.getBeaconManager().removeAllRangeNotifiers();
         plugin.getBeaconManager().addRangeNotifier(rangeNotifier);
         for (Region region : regionRanging) {
