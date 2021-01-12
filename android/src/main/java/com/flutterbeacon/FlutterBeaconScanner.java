@@ -90,7 +90,7 @@ class FlutterBeaconScanner {
 
     try {
       if (plugin.getBeaconManager() != null) {
-        plugin.getBeaconManager().setForegroundScanPeriod(2400); 
+        plugin.getBeaconManager().setForegroundScanPeriod(1200); 
         plugin.getBeaconManager().removeAllRangeNotifiers();
         plugin.getBeaconManager().addRangeNotifier(rangeNotifier);
         for (Region region : regionRanging) {
